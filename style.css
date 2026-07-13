@@ -1,0 +1,125 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#000;
+overflow:hidden;
+color:white;
+height:100vh;
+}
+
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+overflow:hidden;
+}
+
+.stars::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background-image:
+radial-gradient(white 1px,transparent 1px);
+background-size:40px 40px;
+animation:starsMove 120s linear infinite;
+opacity:.8;
+}
+
+@keyframes starsMove{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-800px);
+}
+}
+
+.intro{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+width:90%;
+z-index:5;
+}
+
+#typing{
+font-size:34px;
+font-weight:300;
+line-height:1.8;
+min-height:170px;
+}
+
+#continueBtn{
+display:none;
+margin-top:40px;
+padding:18px 45px;
+font-size:22px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:linear-gradient(45deg,#ff4b8b,#ff7eb3);
+color:white;
+transition:.4s;
+box-shadow:0 0 25px rgba(255,105,180,.5);
+}
+
+#continueBtn:hover{
+transform:scale(1.08);
+box-shadow:0 0 45px hotpink;
+}
+
+.giftSection{
+display:none;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+width:100%;
+}
+
+.giftSection h1{
+font-size:70px;
+font-family:'Great Vibes',cursive;
+color:#ffb3d9;
+text-shadow:0 0 25px hotpink;
+}
+
+.giftSection h2{
+font-size:40px;
+margin-top:20px;
+}
+
+.giftSection p{
+margin-top:30px;
+font-size:22px;
+}
+
+.gift{
+font-size:120px;
+margin-top:30px;
+cursor:pointer;
+animation:bounce 2s infinite;
+transition:.3s;
+}
+
+.gift:hover{
+transform:scale(1.15);
+}
+
+@keyframes bounce{
+0%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+100%{transform:translateY(0);}
+}
